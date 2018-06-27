@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>初识WebSocket</title>
+	<meta charset="UTF-8">
+	<title>初识WebSocket</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		body{
+			width:900px;
+			height:800px;
+			margin:0 auto;
+		}
+		#container{
+			width:100%;
+			height:100%;
+			text-align:center;
+			position:relative;
+			background-color:pink;
+		}
+		#record{
+			width:80%;
+			height:60%;
+			text-align:center;
+		}
+		#input{
+			width:100%;
+			height:30px;
+			position: absolute;
+			bottom:20px;
+		}
+		#info{
+			width:80%;
+			height:100%;
+			border:none;
+			border-radius:5px;
+			font-size:22px;
+			padding-left:3px;
+		}
+		#send{
+			width:10%;
+			height:30px;
+			border-radius:10px;
+			line-height:30px;
+			font-size:22px;
+			background:lightblue;
+		}
+		#msg div{
+			margin-top:20px;
+			word-break: break-all;
+			border-radius:3px;
+		}
+		.system{
+			width:200px;
+			text-align:center;
+			margin:0 auto;
+			background:#ddd;
+			font-size:14px;
+		}
+		.friend{
+			width:fit-content;
+			margin-right:20%;
+			text-align:left;
+			background:#3ff;
+			font-size:18px;
+		}
+		.self{
+			width:fit-content;
+			margin-left:20%;
+			text-align:right;
+			background:#3ff;
+			font-size:18px;
+		}
+	</style>
 </head>
 <body>
-    <h1>Chat Room</h1>
-    <div style="margin-top: 30px;margin-left:30px">
-        <input type="text" id="info">
-        <button id="send">send</button>
-        <div id="notice"></div>
-        <div id="msg"></div>
-    </div>
+	<div id="container">
+		<h1>Chat Room</h1>
+		<div>
+			<div id="record"></div>
+			<div id="input">
+				<input type='text' id="info">
+				<button id="send">send</button>
+			</div>
+			<div id="notice"></div>
+			<div id="msg"></div>
+		</div>
+	</div>
 </body>
 <script src="websocket.js"></script>
 </html>
